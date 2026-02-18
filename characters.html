@@ -1,0 +1,27 @@
+<h1>Enter Your Character Password</h1>
+
+<input type="text" id="pass">
+<button onclick="check()">Enter</button>
+
+<script>
+function check() {
+  let p = document.getElementById("pass").value.toLowerCase();
+
+  const pages = {
+    "rose": "characters/victoria.html",
+    "empire": "characters/daniel.html",
+    "schedule": "characters/lila.html",
+    "press": "characters/elliot.html",
+    "legacy": "characters/margaret.html",
+    "vote": "characters/hale.html",
+    "chef": "characters/andre.html",
+    "doctor": "characters/patel.html",
+    "brand": "characters/cassidy.html",
+    "law": "characters/whitaker.html",
+    "detective": "characters/detective.html"
+  };
+
+  if (pages[p]) window.location.href = pages[p];
+  else alert("Wrong password");
+}
+</script>
